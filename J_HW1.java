@@ -78,17 +78,32 @@ public class J_HW1 {
         System.out.println(calc());
 
         }
-
-          static int calc(){ // Лучше через switch case делать? А если без него, то как?
+    
+    
+     static int calc(){ // Лучше через switch case делать? А если без него, то как?
 
         int a = input();
-        char op = op_input().charAt(0); // Приходит строка, тогда в методе нужен char и кодировку менять, 
-        int b = input();      // а со строками всё, что ниже, не выполняется. Как быть?
-        if (op == '+') return a + b;
-        else if (op == '-') return a - b;
-        else if (op == '*') return a * b;
-        else if (op == '/') return a / b;
-        // Почему просит один return в конце?
-        }      
+        char op = op_input().charAt(0);  
+        int b = input();      
+        int res = 0;
+        if (op == '+')  res = a + b;
+        else if (op == '-') res =  a - b;
+        else if (op == '*') res =  a * b;
+        else if (op == '/') res =  a / b;
+        return res;
+        }     
+    
+// ВОПРОС:
+       //   static int calc(){ // Лучше через switch case делать? А если без него, то как?
+
+        // int a = input();
+        // char op = op_input(); // Приходит строка, тогда в методе нужен char и кодировку менять, 
+        // int b = input();      // а со строками всё, что ниже, не выполняется. Как быть?
+        // if (op == '+') return a + b;
+        // else if (op == '-') return a - b;
+        // else if (op == '*') return a * b;
+        // else if (op == '/') return a / b;
+        // Почему просит только один return в конце?
+        // }      
 
 }
